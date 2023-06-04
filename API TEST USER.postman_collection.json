@@ -24,7 +24,7 @@
 											"bearer": [
 												{
 													"key": "token",
-													"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiYWRtaW4iLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjg1ODM2MTMwLCJleHAiOjE2ODU4MzY3MzB9.VGvk54QOeHtNUvfKr4YuBxRPbOhM4f_5jhj32ahLs4VOYVwbP1XLOQ5RqWSRw0Qk0E_1HsBCnr5SJyan1cdEPQ",
+													"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiYWRtaW4iLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjg1ODQ1ODMzLCJleHAiOjE2ODU4NDY0MzN9.-nON_79a6TItZYwDYtPGiG3UIPlASE65ho9XWyslJsORu2S0NYFUmCA9pWvAMqmlEb8cRRaNWD0isM5lb_gSFA",
 													"type": "string"
 												}
 											]
@@ -37,14 +37,14 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/api/user/3fa8c2b7-f16c-43b5-8817-60bc0543617a",
+											"raw": "{{baseUrl}}/api/user/c969928c-c9f2-4a99-890d-2ab6ad91c521",
 											"host": [
 												"{{baseUrl}}"
 											],
 											"path": [
 												"api",
 												"user",
-												"3fa8c2b7-f16c-43b5-8817-60bc0543617a"
+												"c969928c-c9f2-4a99-890d-2ab6ad91c521"
 											]
 										}
 									},
@@ -187,7 +187,7 @@
 									"bearer": [
 										{
 											"key": "token",
-											"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiYWRtaW4iLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjg1ODM2MTMwLCJleHAiOjE2ODU4MzY3MzB9.VGvk54QOeHtNUvfKr4YuBxRPbOhM4f_5jhj32ahLs4VOYVwbP1XLOQ5RqWSRw0Qk0E_1HsBCnr5SJyan1cdEPQ",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiYWRtaW4iLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjg1ODQ1NDMxLCJleHAiOjE2ODU4NDYwMzF9.lsjLYfXIcJq-8QEAjAGFBTXv5hlsxoWwXxXJVsEuC4dPFAF78KjMtpb6uT-wS4CVDZAP0YOGWes3zYZyy_j05Q",
 											"type": "string"
 										}
 									]
@@ -323,7 +323,7 @@
 									"bearer": [
 										{
 											"key": "token",
-											"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiYWRtaW4iLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjg1ODQxNTA2LCJleHAiOjE2ODU4NDIxMDZ9.m-_nNpirlc5ggmPWTbZ69v9oIREqA5lhCZdOk_tSkH9UOKAARizQO4SyFM0rYJSI5A2BiBfAAOxcs8biFEw3Ng",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiYWRtaW4iLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjg1ODQ1ODAxLCJleHAiOjE2ODU4NDY0MDF9.l6Fk3wkDCA29vjmZ8s0oDSs_MQ-Spo39OoO3YDBUVhkngdVgsPM2_tgtgeu8A6OIg_vd6muKoBdPpOueBLIqVg",
 											"type": "string"
 										}
 									]
@@ -570,7 +570,7 @@
 									"bearer": [
 										{
 											"key": "token",
-											"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiYWRtaW4iLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjg1ODQxNTA2LCJleHAiOjE2ODU4NDIxMDZ9.m-_nNpirlc5ggmPWTbZ69v9oIREqA5lhCZdOk_tSkH9UOKAARizQO4SyFM0rYJSI5A2BiBfAAOxcs8biFEw3Ng",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiYWRtaW4iLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjg1ODQ1ODgzLCJleHAiOjE2ODU4NDY0ODN9.EpJvFCcA4Otg3T6t0SQr7HOPnd4K8AsIldFBsn7JABeST-mrUDKhrJt2F3Jwg9gdFl0RsWJ7kpod8P6Y-1JIlQ",
 											"type": "string"
 										}
 									]
@@ -588,7 +588,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"email\": \"jriffo.toro@gmail.com\",\n  \"id\": \"af2991e5-3e83-4579-8154-41b99efc8c5f\",\n  \"name\": \"José Riffo Toro\",\n  \"password\": \"Bgfdgfdg23dsfds\",\n  \"phones\": [\n    {\n      \"citycode\": \"2\",\n      \"contrycode\": \"56\",\n      \"number\": \"5556127\"\n      \n    }\n  ]\n}",
+									"raw": "{\n  \"email\": \"jriffo.toro@gmail.com\",\n  \"name\": \"José Riffo Toro\",\n  \"password\": \"Bgfdgfdg23dsfds\",\n  \"phones\": [\n    {\n      \"citycode\": \"2\",\n      \"contrycode\": \"56\",\n      \"number\": \"5556127\"\n      \n    }\n  ]\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -597,13 +597,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseUrl}}/api/user",
+									"raw": "{{baseUrl}}/api/user/8dd9e9eb-b628-4035-82fa-9d7eaa990403",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
 										"api",
-										"user"
+										"user",
+										"8dd9e9eb-b628-4035-82fa-9d7eaa990403"
 									]
 								}
 							},
