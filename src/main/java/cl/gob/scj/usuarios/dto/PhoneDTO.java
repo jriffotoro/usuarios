@@ -6,7 +6,7 @@ public class PhoneDTO {
     private String number;
     private String citycode;
     private String contrycode;
-    private UserDTO user;
+    //private UserDTO user;
 
     public String getNumber() {
         return this.number;
@@ -32,13 +32,13 @@ public class PhoneDTO {
         this.contrycode = contrycode;
     }     
 
-    public UserDTO getUser() {
+    /*public UserDTO getUser() {
         return this.user;
     }
 
     public void setUser(UserDTO user) {
         this.user = user;
-    }      
+    }  */    
 
     public Integer getId_phone() {
         return this.id_phone;

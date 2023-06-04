@@ -26,6 +26,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import cl.gob.scj.usuarios.dto.RespuestaJSON;
 import cl.gob.scj.usuarios.dto.UserDTO;
+import cl.gob.scj.usuarios.dto.UserDTORequest;
 import cl.gob.scj.usuarios.exception.SCJException;
 import cl.gob.scj.usuarios.service.UserService;
 import io.jsonwebtoken.Jwts;
@@ -42,7 +43,7 @@ public class UserController {
     private MessageSource mensajes;
 
     @PostMapping("/user")
-    public ResponseEntity<RespuestaJSON> crearUser(@RequestBody UserDTO user, HttpServletRequest request) {
+    public ResponseEntity<RespuestaJSON> crearUser(@RequestBody UserDTORequest user, HttpServletRequest request) {
         try {
             user.setToken((String)request.getAttribute("jwtToken"));
             return new ResponseEntity<>(userService.crearUser(user), HttpStatus.CREATED);
@@ -81,7 +82,7 @@ public class UserController {
     }
 
     @PutMapping("/user/{id}")
-    public ResponseEntity<RespuestaJSON> actualizaUser(@PathVariable String id, @RequestBody UserDTO user) {
+    public ResponseEntity<RespuestaJSON> actualizaUser(@PathVariable String id, @RequestBody UserDTORequest user) {
         try {            
             user.setId(id);
             RespuestaJSON r = userService.actualizaUser(user);

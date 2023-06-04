@@ -28,6 +28,7 @@ import org.springframework.test.context.TestPropertySource;
 
 import cl.gob.scj.usuarios.dto.RespuestaJSON;
 import cl.gob.scj.usuarios.dto.UserDTO;
+import cl.gob.scj.usuarios.dto.UserDTORequest;
 import cl.gob.scj.usuarios.exception.SCJException;
 import cl.gob.scj.usuarios.model.User;
 import cl.gob.scj.usuarios.service.UserService;
@@ -56,7 +57,7 @@ public class UserControllerTest {
     @Test
     void testCrearUserSuccess() throws SCJException {
         // Mock de datos
-        UserDTO userDTO = new UserDTO();
+        UserDTORequest userDTO = new UserDTORequest();
         userDTO.setName("scj");
 		userDTO.setEmail("scj@scj.gob.cl");
 		userDTO.setPassword("Bgfdgfdg23dsfds");
@@ -68,14 +69,14 @@ public class UserControllerTest {
         ResponseEntity<RespuestaJSON> expectedResponse = new ResponseEntity<>(respuestaJSON, HttpStatus.CREATED);
 
         // Mock de comportamiento
-        when(userService.crearUser(any(UserDTO.class))).thenReturn(respuestaJSON);
+        when(userService.crearUser(any(UserDTORequest.class))).thenReturn(respuestaJSON);
         when(request.getAttribute("jwtToken")).thenReturn("mockToken");
 
         // Ejecutar el método a probar
         ResponseEntity<RespuestaJSON> response = userController.crearUser(userDTO, request);
 
         // Verificaciones
-        verify(userService, times(1)).crearUser(any(UserDTO.class));
+        verify(userService, times(1)).crearUser(any(UserDTORequest.class));
         verify(request, times(1)).getAttribute("jwtToken");
         assertEquals(expectedResponse, response);
         assertEquals(response.getStatusCode().value(), HttpStatus.CREATED.value());
@@ -84,16 +85,16 @@ public class UserControllerTest {
     @Test
     void testCrearUserSCJException() throws SCJException {
         // Mock de datos
-        UserDTO user = new UserDTO();
+        UserDTORequest user = new UserDTORequest();
 
         // Mock de comportamiento
-        when(userService.crearUser(any(UserDTO.class))).thenThrow(new SCJException("Error"));
+        when(userService.crearUser(any(UserDTORequest.class))).thenThrow(new SCJException("Error"));
 
         // Ejecutar el método a probar
         ResponseEntity<RespuestaJSON> response = userController.crearUser(user, request);
 
         // Verificaciones
-        verify(userService, times(1)).crearUser(any(UserDTO.class));
+        verify(userService, times(1)).crearUser(any(UserDTORequest.class));
         assertEquals(HttpStatus.ALREADY_REPORTED, response.getStatusCode());
     }
 

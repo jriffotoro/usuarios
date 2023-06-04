@@ -19,16 +19,6 @@
 								{
 									"name": "borraUser",
 									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiYWRtaW4iLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjg1ODQ1ODMzLCJleHAiOjE2ODU4NDY0MzN9.-nON_79a6TItZYwDYtPGiG3UIPlASE65ho9XWyslJsORu2S0NYFUmCA9pWvAMqmlEb8cRRaNWD0isM5lb_gSFA",
-													"type": "string"
-												}
-											]
-										},
 										"method": "DELETE",
 										"header": [
 											{
@@ -37,14 +27,14 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/api/user/c969928c-c9f2-4a99-890d-2ab6ad91c521",
+											"raw": "{{baseUrl}}/api/user/4e87093f-67d8-42b8-b54c-f5b0e20828f4",
 											"host": [
 												"{{baseUrl}}"
 											],
 											"path": [
 												"api",
 												"user",
-												"c969928c-c9f2-4a99-890d-2ab6ad91c521"
+												"4e87093f-67d8-42b8-b54c-f5b0e20828f4"
 											]
 										}
 									},
@@ -182,16 +172,6 @@
 						{
 							"name": "getUsers",
 							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiYWRtaW4iLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjg1ODQ1NDMxLCJleHAiOjE2ODU4NDYwMzF9.lsjLYfXIcJq-8QEAjAGFBTXv5hlsxoWwXxXJVsEuC4dPFAF78KjMtpb6uT-wS4CVDZAP0YOGWes3zYZyy_j05Q",
-											"type": "string"
-										}
-									]
-								},
 								"method": "GET",
 								"header": [
 									{
@@ -318,16 +298,6 @@
 						{
 							"name": "crearUser",
 							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiYWRtaW4iLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjg1ODQ1ODAxLCJleHAiOjE2ODU4NDY0MDF9.l6Fk3wkDCA29vjmZ8s0oDSs_MQ-Spo39OoO3YDBUVhkngdVgsPM2_tgtgeu8A6OIg_vd6muKoBdPpOueBLIqVg",
-											"type": "string"
-										}
-									]
-								},
 								"method": "POST",
 								"header": [
 									{
@@ -565,16 +535,6 @@
 						{
 							"name": "actualizaUser",
 							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiYWRtaW4iLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjg1ODQ1ODgzLCJleHAiOjE2ODU4NDY0ODN9.EpJvFCcA4Otg3T6t0SQr7HOPnd4K8AsIldFBsn7JABeST-mrUDKhrJt2F3Jwg9gdFl0RsWJ7kpod8P6Y-1JIlQ",
-											"type": "string"
-										}
-									]
-								},
 								"method": "PUT",
 								"header": [
 									{
@@ -588,7 +548,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"email\": \"jriffo.toro@gmail.com\",\n  \"name\": \"José Riffo Toro\",\n  \"password\": \"Bgfdgfdg23dsfds\",\n  \"phones\": [\n    {\n      \"citycode\": \"2\",\n      \"contrycode\": \"56\",\n      \"number\": \"5556127\"\n      \n    }\n  ]\n}",
+									"raw": "{\n  \"email\": \"jriffo.toro@gmail.com\",\n  \"name\": \"José Riffo Toro\",\n  \"password\": \"Bgfdgfdg23dsfds\",\n  \"isactive\": true,\n  \"phones\": [\n    {\n      \"citycode\": \"2\",\n      \"contrycode\": \"56\",\n      \"number\": \"5556127\"\n      \n    }\n  ]\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -597,14 +557,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseUrl}}/api/user/8dd9e9eb-b628-4035-82fa-9d7eaa990403",
+									"raw": "{{baseUrl}}/api/user/4e87093f-67d8-42b8-b54c-f5b0e20828f4",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
 										"api",
 										"user",
-										"8dd9e9eb-b628-4035-82fa-9d7eaa990403"
+										"4e87093f-67d8-42b8-b54c-f5b0e20828f4"
 									]
 								}
 							},
@@ -1057,6 +1017,16 @@
 			]
 		}
 	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiYWRtaW4iLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjg1ODk1MDU0LCJleHAiOjE2ODU4OTU2NTR9.ObaFjEDcecQQ2WAD2QzvW9RbfnfwTzwPSyzr0UyhBzp_idlWAAaXgQ1battco7X1BnvAkSe02eJFB-597JIg0Q",
+				"type": "string"
+			}
+		]
+	},
 	"event": [
 		{
 			"listen": "prerequest",

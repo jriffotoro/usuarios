@@ -19,6 +19,7 @@ import org.springframework.test.context.TestPropertySource;
 
 import cl.gob.scj.usuarios.dto.RespuestaJSON;
 import cl.gob.scj.usuarios.dto.UserDTO;
+import cl.gob.scj.usuarios.dto.UserDTORequest;
 import cl.gob.scj.usuarios.exception.SCJException;
 import cl.gob.scj.usuarios.model.Phone;
 import cl.gob.scj.usuarios.model.User;
@@ -44,7 +45,7 @@ class UserServiceImplTests {
 	void crearUserTest() throws SCJException {
 		//Arrage
 		User user = new User();
-		UserDTO userDto = new UserDTO();
+		UserDTORequest userDto = new UserDTORequest();
 		userDto.setName("scj");
 		userDto.setEmail("scj@scj.gob.cl");
 		userDto.setPassword("Bgfdgfdg23dsfds");

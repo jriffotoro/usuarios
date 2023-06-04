@@ -19,6 +19,7 @@ import org.springframework.transaction.annotation.Transactional;
 import cl.gob.scj.usuarios.dto.PhoneDTO;
 import cl.gob.scj.usuarios.dto.RespuestaJSON;
 import cl.gob.scj.usuarios.dto.UserDTO;
+import cl.gob.scj.usuarios.dto.UserDTORequest;
 import cl.gob.scj.usuarios.dto.LoginDTO;
 import cl.gob.scj.usuarios.model.Phone;
 import cl.gob.scj.usuarios.model.User;
@@ -51,13 +52,13 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional(rollbackFor = Throwable.class)
-    public RespuestaJSON crearUser(UserDTO user) throws SCJException {
-        Optional<User> up = userRepository.email(user.getEmail());
+    public RespuestaJSON crearUser(UserDTORequest userRequest) throws SCJException {
+        Optional<User> up = userRepository.email(userRequest.getEmail());
         if (up.isPresent()) {
             throw new SCJException(mensajes.getMessage("user.correo-ya-registrado", null, LocaleContextHolder.getLocale()));
         }
         User u = new User();
-        BeanUtils.copyProperties(user, u);
+        BeanUtils.copyProperties(userRequest, u);
         UUID uuid = UUID.randomUUID();
         String uuidAsString = uuid.toString();
         u.setId(uuidAsString);
@@ -65,7 +66,7 @@ public class UserServiceImpl implements UserService {
         u.setLast_login(new Timestamp(new Date().getTime()));
         u.setIsactive(true);         
         userRepository.save(u);
-        List<PhoneDTO> p = user.getPhones();
+        List<PhoneDTO> p = userRequest.getPhones();
         if (p!=null) {
             p.forEach((final PhoneDTO phone) -> { 
                 Phone f = new Phone();
@@ -74,9 +75,6 @@ public class UserServiceImpl implements UserService {
                 phoneRepository.save(f); 
             });
         }
-        user.setCreated(u.getCreated());
-        user.setLast_login(u.getLast_login());
-        user.setIsactive(u.getIsactive());
         return new RespuestaJSON(RespuestaJSON.EstadoType.OK.getRespuestaJSONS(), mensajes.getMessage("user.creado", null, LocaleContextHolder.getLocale()), u);
     }
 
@@ -119,7 +117,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional(rollbackFor = Throwable.class)
-    public RespuestaJSON actualizaUser(UserDTO user) {
+    public RespuestaJSON actualizaUser(UserDTORequest user) {
         Optional<User> t = userRepository.findById(user.getId());
         if (t.isPresent()) {
             User u = t.get();
@@ -129,6 +127,17 @@ public class UserServiceImpl implements UserService {
             u.setModified(new Timestamp(new Date().getTime()));
             u.setName(user.getName());
             u.setPassword(user.getPassword());
+            List<Phone> ph = u.getPhones();
+            Optional.ofNullable(ph).ifPresent(l -> l.forEach(phone -> {phoneRepository.delete(phone);}));
+            List<PhoneDTO> p = user.getPhones();
+            if (p!=null) {
+                p.forEach((final PhoneDTO phone) -> { 
+                    Phone f = new Phone();
+                    BeanUtils.copyProperties(phone, f);
+                    f.setUser(u); 
+                    phoneRepository.save(f); 
+                });
+            }
             return new RespuestaJSON(RespuestaJSON.EstadoType.OK.getRespuestaJSONS(), mensajes.getMessage("user.actualizado", null, LocaleContextHolder.getLocale()), user);
         }   
         return new RespuestaJSON(RespuestaJSON.EstadoType.ERROR.getRespuestaJSONS(), mensajes.getMessage("user.no-encontrado", null, LocaleContextHolder.getLocale()));       
