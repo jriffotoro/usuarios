@@ -1,0 +1,1085 @@
+{
+	"info": {
+		"_postman_id": "46862651-faa0-493d-beb7-4bb26fe5fa84",
+		"name": "API TEST USER",
+		"description": "API TEST USER\n\nContact Support:\n Name: SCJ TEST - Jose Riffo\n Email: jriffo.toro@gmail.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "733614"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "borraUser",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiYWRtaW4iLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjg1ODM2MTMwLCJleHAiOjE2ODU4MzY3MzB9.VGvk54QOeHtNUvfKr4YuBxRPbOhM4f_5jhj32ahLs4VOYVwbP1XLOQ5RqWSRw0Qk0E_1HsBCnr5SJyan1cdEPQ",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/user/3fa8c2b7-f16c-43b5-8817-60bc0543617a",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"3fa8c2b7-f16c-43b5-8817-60bc0543617a"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/user/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"user",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"adicional\": {},\n  \"estado\": \"<integer>\",\n  \"mensaje\": \"<string>\",\n  \"tipoRespuesta\": \"<string>\"\n}"
+										},
+										{
+											"name": "No Content",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/user/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"user",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/user/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"user",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/user/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"user",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "getUsers",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiYWRtaW4iLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjg1ODM2MTMwLCJleHAiOjE2ODU4MzY3MzB9.VGvk54QOeHtNUvfKr4YuBxRPbOhM4f_5jhj32ahLs4VOYVwbP1XLOQ5RqWSRw0Qk0E_1HsBCnr5SJyan1cdEPQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/user",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"user"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/user",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"adicional\": {},\n  \"estado\": \"<integer>\",\n  \"mensaje\": \"<string>\",\n  \"tipoRespuesta\": \"<string>\"\n}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/user",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/user",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/user",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "crearUser",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiYWRtaW4iLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjg1ODQxNTA2LCJleHAiOjE2ODU4NDIxMDZ9.m-_nNpirlc5ggmPWTbZ69v9oIREqA5lhCZdOk_tSkH9UOKAARizQO4SyFM0rYJSI5A2BiBfAAOxcs8biFEw3Ng",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"jriffo.toro@gmail.com\",\n  \"name\": \"José Riffo Toro\",\n  \"password\": \"Bgfdgfdg23dsfds\",\n  \"phones\": [\n    {\n      \"citycode\": \"2\",\n      \"contrycode\": \"56\",\n      \"number\": \"5556127\"\n      \n    },\n    {\n      \"citycode\": \"2\",\n      \"contrycode\": \"56\",\n      \"number\": \"55561279\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/user",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"user"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"created\": {\n    \"date\": \"<integer>\",\n    \"day\": \"<integer>\",\n    \"hours\": \"<integer>\",\n    \"minutes\": \"<integer>\",\n    \"month\": \"<integer>\",\n    \"nanos\": \"<integer>\",\n    \"seconds\": \"<integer>\",\n    \"time\": \"<long>\",\n    \"timezoneOffset\": \"<integer>\",\n    \"year\": \"<integer>\"\n  },\n  \"email\": \"<string>\",\n  \"id\": \"<string>\",\n  \"isactive\": \"<boolean>\",\n  \"last_login\": {\n    \"date\": \"<integer>\",\n    \"day\": \"<integer>\",\n    \"hours\": \"<integer>\",\n    \"minutes\": \"<integer>\",\n    \"month\": \"<integer>\",\n    \"nanos\": \"<integer>\",\n    \"seconds\": \"<integer>\",\n    \"time\": \"<long>\",\n    \"timezoneOffset\": \"<integer>\",\n    \"year\": \"<integer>\"\n  },\n  \"modified\": {\n    \"date\": \"<integer>\",\n    \"day\": \"<integer>\",\n    \"hours\": \"<integer>\",\n    \"minutes\": \"<integer>\",\n    \"month\": \"<integer>\",\n    \"nanos\": \"<integer>\",\n    \"seconds\": \"<integer>\",\n    \"time\": \"<long>\",\n    \"timezoneOffset\": \"<integer>\",\n    \"year\": \"<integer>\"\n  },\n  \"name\": \"<string>\",\n  \"password\": \"<string>\",\n  \"phones\": [\n    {\n      \"citycode\": \"<string>\",\n      \"contrycode\": \"<string>\",\n      \"id_phone\": \"<integer>\",\n      \"number\": \"<string>\",\n      \"user\": {\n        \"value\": \"<Circular reference to #/components/schemas/UserDTO detected>\"\n      }\n    },\n    {\n      \"citycode\": \"<string>\",\n      \"contrycode\": \"<string>\",\n      \"id_phone\": \"<integer>\",\n      \"number\": \"<string>\",\n      \"user\": {\n        \"value\": \"<Circular reference to #/components/schemas/UserDTO detected>\"\n      }\n    }\n  ],\n  \"token\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"adicional\": {},\n  \"estado\": \"<integer>\",\n  \"mensaje\": \"<string>\",\n  \"tipoRespuesta\": \"<string>\"\n}"
+								},
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"created\": {\n    \"date\": \"<integer>\",\n    \"day\": \"<integer>\",\n    \"hours\": \"<integer>\",\n    \"minutes\": \"<integer>\",\n    \"month\": \"<integer>\",\n    \"nanos\": \"<integer>\",\n    \"seconds\": \"<integer>\",\n    \"time\": \"<long>\",\n    \"timezoneOffset\": \"<integer>\",\n    \"year\": \"<integer>\"\n  },\n  \"email\": \"<string>\",\n  \"id\": \"<string>\",\n  \"isactive\": \"<boolean>\",\n  \"last_login\": {\n    \"date\": \"<integer>\",\n    \"day\": \"<integer>\",\n    \"hours\": \"<integer>\",\n    \"minutes\": \"<integer>\",\n    \"month\": \"<integer>\",\n    \"nanos\": \"<integer>\",\n    \"seconds\": \"<integer>\",\n    \"time\": \"<long>\",\n    \"timezoneOffset\": \"<integer>\",\n    \"year\": \"<integer>\"\n  },\n  \"modified\": {\n    \"date\": \"<integer>\",\n    \"day\": \"<integer>\",\n    \"hours\": \"<integer>\",\n    \"minutes\": \"<integer>\",\n    \"month\": \"<integer>\",\n    \"nanos\": \"<integer>\",\n    \"seconds\": \"<integer>\",\n    \"time\": \"<long>\",\n    \"timezoneOffset\": \"<integer>\",\n    \"year\": \"<integer>\"\n  },\n  \"name\": \"<string>\",\n  \"password\": \"<string>\",\n  \"phones\": [\n    {\n      \"citycode\": \"<string>\",\n      \"contrycode\": \"<string>\",\n      \"id_phone\": \"<integer>\",\n      \"number\": \"<string>\",\n      \"user\": {\n        \"value\": \"<Circular reference to #/components/schemas/UserDTO detected>\"\n      }\n    },\n    {\n      \"citycode\": \"<string>\",\n      \"contrycode\": \"<string>\",\n      \"id_phone\": \"<integer>\",\n      \"number\": \"<string>\",\n      \"user\": {\n        \"value\": \"<Circular reference to #/components/schemas/UserDTO detected>\"\n      }\n    }\n  ],\n  \"token\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"created\": {\n    \"date\": \"<integer>\",\n    \"day\": \"<integer>\",\n    \"hours\": \"<integer>\",\n    \"minutes\": \"<integer>\",\n    \"month\": \"<integer>\",\n    \"nanos\": \"<integer>\",\n    \"seconds\": \"<integer>\",\n    \"time\": \"<long>\",\n    \"timezoneOffset\": \"<integer>\",\n    \"year\": \"<integer>\"\n  },\n  \"email\": \"<string>\",\n  \"id\": \"<string>\",\n  \"isactive\": \"<boolean>\",\n  \"last_login\": {\n    \"date\": \"<integer>\",\n    \"day\": \"<integer>\",\n    \"hours\": \"<integer>\",\n    \"minutes\": \"<integer>\",\n    \"month\": \"<integer>\",\n    \"nanos\": \"<integer>\",\n    \"seconds\": \"<integer>\",\n    \"time\": \"<long>\",\n    \"timezoneOffset\": \"<integer>\",\n    \"year\": \"<integer>\"\n  },\n  \"modified\": {\n    \"date\": \"<integer>\",\n    \"day\": \"<integer>\",\n    \"hours\": \"<integer>\",\n    \"minutes\": \"<integer>\",\n    \"month\": \"<integer>\",\n    \"nanos\": \"<integer>\",\n    \"seconds\": \"<integer>\",\n    \"time\": \"<long>\",\n    \"timezoneOffset\": \"<integer>\",\n    \"year\": \"<integer>\"\n  },\n  \"name\": \"<string>\",\n  \"password\": \"<string>\",\n  \"phones\": [\n    {\n      \"citycode\": \"<string>\",\n      \"contrycode\": \"<string>\",\n      \"id_phone\": \"<integer>\",\n      \"number\": \"<string>\",\n      \"user\": {\n        \"value\": \"<Circular reference to #/components/schemas/UserDTO detected>\"\n      }\n    },\n    {\n      \"citycode\": \"<string>\",\n      \"contrycode\": \"<string>\",\n      \"id_phone\": \"<integer>\",\n      \"number\": \"<string>\",\n      \"user\": {\n        \"value\": \"<Circular reference to #/components/schemas/UserDTO detected>\"\n      }\n    }\n  ],\n  \"token\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"created\": {\n    \"date\": \"<integer>\",\n    \"day\": \"<integer>\",\n    \"hours\": \"<integer>\",\n    \"minutes\": \"<integer>\",\n    \"month\": \"<integer>\",\n    \"nanos\": \"<integer>\",\n    \"seconds\": \"<integer>\",\n    \"time\": \"<long>\",\n    \"timezoneOffset\": \"<integer>\",\n    \"year\": \"<integer>\"\n  },\n  \"email\": \"<string>\",\n  \"id\": \"<string>\",\n  \"isactive\": \"<boolean>\",\n  \"last_login\": {\n    \"date\": \"<integer>\",\n    \"day\": \"<integer>\",\n    \"hours\": \"<integer>\",\n    \"minutes\": \"<integer>\",\n    \"month\": \"<integer>\",\n    \"nanos\": \"<integer>\",\n    \"seconds\": \"<integer>\",\n    \"time\": \"<long>\",\n    \"timezoneOffset\": \"<integer>\",\n    \"year\": \"<integer>\"\n  },\n  \"modified\": {\n    \"date\": \"<integer>\",\n    \"day\": \"<integer>\",\n    \"hours\": \"<integer>\",\n    \"minutes\": \"<integer>\",\n    \"month\": \"<integer>\",\n    \"nanos\": \"<integer>\",\n    \"seconds\": \"<integer>\",\n    \"time\": \"<long>\",\n    \"timezoneOffset\": \"<integer>\",\n    \"year\": \"<integer>\"\n  },\n  \"name\": \"<string>\",\n  \"password\": \"<string>\",\n  \"phones\": [\n    {\n      \"citycode\": \"<string>\",\n      \"contrycode\": \"<string>\",\n      \"id_phone\": \"<integer>\",\n      \"number\": \"<string>\",\n      \"user\": {\n        \"value\": \"<Circular reference to #/components/schemas/UserDTO detected>\"\n      }\n    },\n    {\n      \"citycode\": \"<string>\",\n      \"contrycode\": \"<string>\",\n      \"id_phone\": \"<integer>\",\n      \"number\": \"<string>\",\n      \"user\": {\n        \"value\": \"<Circular reference to #/components/schemas/UserDTO detected>\"\n      }\n    }\n  ],\n  \"token\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"created\": {\n    \"date\": \"<integer>\",\n    \"day\": \"<integer>\",\n    \"hours\": \"<integer>\",\n    \"minutes\": \"<integer>\",\n    \"month\": \"<integer>\",\n    \"nanos\": \"<integer>\",\n    \"seconds\": \"<integer>\",\n    \"time\": \"<long>\",\n    \"timezoneOffset\": \"<integer>\",\n    \"year\": \"<integer>\"\n  },\n  \"email\": \"<string>\",\n  \"id\": \"<string>\",\n  \"isactive\": \"<boolean>\",\n  \"last_login\": {\n    \"date\": \"<integer>\",\n    \"day\": \"<integer>\",\n    \"hours\": \"<integer>\",\n    \"minutes\": \"<integer>\",\n    \"month\": \"<integer>\",\n    \"nanos\": \"<integer>\",\n    \"seconds\": \"<integer>\",\n    \"time\": \"<long>\",\n    \"timezoneOffset\": \"<integer>\",\n    \"year\": \"<integer>\"\n  },\n  \"modified\": {\n    \"date\": \"<integer>\",\n    \"day\": \"<integer>\",\n    \"hours\": \"<integer>\",\n    \"minutes\": \"<integer>\",\n    \"month\": \"<integer>\",\n    \"nanos\": \"<integer>\",\n    \"seconds\": \"<integer>\",\n    \"time\": \"<long>\",\n    \"timezoneOffset\": \"<integer>\",\n    \"year\": \"<integer>\"\n  },\n  \"name\": \"<string>\",\n  \"password\": \"<string>\",\n  \"phones\": [\n    {\n      \"citycode\": \"<string>\",\n      \"contrycode\": \"<string>\",\n      \"id_phone\": \"<integer>\",\n      \"number\": \"<string>\",\n      \"user\": {\n        \"value\": \"<Circular reference to #/components/schemas/UserDTO detected>\"\n      }\n    },\n    {\n      \"citycode\": \"<string>\",\n      \"contrycode\": \"<string>\",\n      \"id_phone\": \"<integer>\",\n      \"number\": \"<string>\",\n      \"user\": {\n        \"value\": \"<Circular reference to #/components/schemas/UserDTO detected>\"\n      }\n    }\n  ],\n  \"token\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "actualizaUser",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiYWRtaW4iLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjg1ODQxNTA2LCJleHAiOjE2ODU4NDIxMDZ9.m-_nNpirlc5ggmPWTbZ69v9oIREqA5lhCZdOk_tSkH9UOKAARizQO4SyFM0rYJSI5A2BiBfAAOxcs8biFEw3Ng",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"jriffo.toro@gmail.com\",\n  \"id\": \"af2991e5-3e83-4579-8154-41b99efc8c5f\",\n  \"name\": \"José Riffo Toro\",\n  \"password\": \"Bgfdgfdg23dsfds\",\n  \"phones\": [\n    {\n      \"citycode\": \"2\",\n      \"contrycode\": \"56\",\n      \"number\": \"5556127\"\n      \n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/user",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"user"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"created\": {\n    \"date\": \"<integer>\",\n    \"day\": \"<integer>\",\n    \"hours\": \"<integer>\",\n    \"minutes\": \"<integer>\",\n    \"month\": \"<integer>\",\n    \"nanos\": \"<integer>\",\n    \"seconds\": \"<integer>\",\n    \"time\": \"<long>\",\n    \"timezoneOffset\": \"<integer>\",\n    \"year\": \"<integer>\"\n  },\n  \"email\": \"<string>\",\n  \"id\": \"<string>\",\n  \"isactive\": \"<boolean>\",\n  \"last_login\": {\n    \"date\": \"<integer>\",\n    \"day\": \"<integer>\",\n    \"hours\": \"<integer>\",\n    \"minutes\": \"<integer>\",\n    \"month\": \"<integer>\",\n    \"nanos\": \"<integer>\",\n    \"seconds\": \"<integer>\",\n    \"time\": \"<long>\",\n    \"timezoneOffset\": \"<integer>\",\n    \"year\": \"<integer>\"\n  },\n  \"modified\": {\n    \"date\": \"<integer>\",\n    \"day\": \"<integer>\",\n    \"hours\": \"<integer>\",\n    \"minutes\": \"<integer>\",\n    \"month\": \"<integer>\",\n    \"nanos\": \"<integer>\",\n    \"seconds\": \"<integer>\",\n    \"time\": \"<long>\",\n    \"timezoneOffset\": \"<integer>\",\n    \"year\": \"<integer>\"\n  },\n  \"name\": \"<string>\",\n  \"password\": \"<string>\",\n  \"phones\": [\n    {\n      \"citycode\": \"<string>\",\n      \"contrycode\": \"<string>\",\n      \"id_phone\": \"<integer>\",\n      \"number\": \"<string>\",\n      \"user\": {\n        \"value\": \"<Circular reference to #/components/schemas/UserDTO detected>\"\n      }\n    },\n    {\n      \"citycode\": \"<string>\",\n      \"contrycode\": \"<string>\",\n      \"id_phone\": \"<integer>\",\n      \"number\": \"<string>\",\n      \"user\": {\n        \"value\": \"<Circular reference to #/components/schemas/UserDTO detected>\"\n      }\n    }\n  ],\n  \"token\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"adicional\": {},\n  \"estado\": \"<integer>\",\n  \"mensaje\": \"<string>\",\n  \"tipoRespuesta\": \"<string>\"\n}"
+								},
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"created\": {\n    \"date\": \"<integer>\",\n    \"day\": \"<integer>\",\n    \"hours\": \"<integer>\",\n    \"minutes\": \"<integer>\",\n    \"month\": \"<integer>\",\n    \"nanos\": \"<integer>\",\n    \"seconds\": \"<integer>\",\n    \"time\": \"<long>\",\n    \"timezoneOffset\": \"<integer>\",\n    \"year\": \"<integer>\"\n  },\n  \"email\": \"<string>\",\n  \"id\": \"<string>\",\n  \"isactive\": \"<boolean>\",\n  \"last_login\": {\n    \"date\": \"<integer>\",\n    \"day\": \"<integer>\",\n    \"hours\": \"<integer>\",\n    \"minutes\": \"<integer>\",\n    \"month\": \"<integer>\",\n    \"nanos\": \"<integer>\",\n    \"seconds\": \"<integer>\",\n    \"time\": \"<long>\",\n    \"timezoneOffset\": \"<integer>\",\n    \"year\": \"<integer>\"\n  },\n  \"modified\": {\n    \"date\": \"<integer>\",\n    \"day\": \"<integer>\",\n    \"hours\": \"<integer>\",\n    \"minutes\": \"<integer>\",\n    \"month\": \"<integer>\",\n    \"nanos\": \"<integer>\",\n    \"seconds\": \"<integer>\",\n    \"time\": \"<long>\",\n    \"timezoneOffset\": \"<integer>\",\n    \"year\": \"<integer>\"\n  },\n  \"name\": \"<string>\",\n  \"password\": \"<string>\",\n  \"phones\": [\n    {\n      \"citycode\": \"<string>\",\n      \"contrycode\": \"<string>\",\n      \"id_phone\": \"<integer>\",\n      \"number\": \"<string>\",\n      \"user\": {\n        \"value\": \"<Circular reference to #/components/schemas/UserDTO detected>\"\n      }\n    },\n    {\n      \"citycode\": \"<string>\",\n      \"contrycode\": \"<string>\",\n      \"id_phone\": \"<integer>\",\n      \"number\": \"<string>\",\n      \"user\": {\n        \"value\": \"<Circular reference to #/components/schemas/UserDTO detected>\"\n      }\n    }\n  ],\n  \"token\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"created\": {\n    \"date\": \"<integer>\",\n    \"day\": \"<integer>\",\n    \"hours\": \"<integer>\",\n    \"minutes\": \"<integer>\",\n    \"month\": \"<integer>\",\n    \"nanos\": \"<integer>\",\n    \"seconds\": \"<integer>\",\n    \"time\": \"<long>\",\n    \"timezoneOffset\": \"<integer>\",\n    \"year\": \"<integer>\"\n  },\n  \"email\": \"<string>\",\n  \"id\": \"<string>\",\n  \"isactive\": \"<boolean>\",\n  \"last_login\": {\n    \"date\": \"<integer>\",\n    \"day\": \"<integer>\",\n    \"hours\": \"<integer>\",\n    \"minutes\": \"<integer>\",\n    \"month\": \"<integer>\",\n    \"nanos\": \"<integer>\",\n    \"seconds\": \"<integer>\",\n    \"time\": \"<long>\",\n    \"timezoneOffset\": \"<integer>\",\n    \"year\": \"<integer>\"\n  },\n  \"modified\": {\n    \"date\": \"<integer>\",\n    \"day\": \"<integer>\",\n    \"hours\": \"<integer>\",\n    \"minutes\": \"<integer>\",\n    \"month\": \"<integer>\",\n    \"nanos\": \"<integer>\",\n    \"seconds\": \"<integer>\",\n    \"time\": \"<long>\",\n    \"timezoneOffset\": \"<integer>\",\n    \"year\": \"<integer>\"\n  },\n  \"name\": \"<string>\",\n  \"password\": \"<string>\",\n  \"phones\": [\n    {\n      \"citycode\": \"<string>\",\n      \"contrycode\": \"<string>\",\n      \"id_phone\": \"<integer>\",\n      \"number\": \"<string>\",\n      \"user\": {\n        \"value\": \"<Circular reference to #/components/schemas/UserDTO detected>\"\n      }\n    },\n    {\n      \"citycode\": \"<string>\",\n      \"contrycode\": \"<string>\",\n      \"id_phone\": \"<integer>\",\n      \"number\": \"<string>\",\n      \"user\": {\n        \"value\": \"<Circular reference to #/components/schemas/UserDTO detected>\"\n      }\n    }\n  ],\n  \"token\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"created\": {\n    \"date\": \"<integer>\",\n    \"day\": \"<integer>\",\n    \"hours\": \"<integer>\",\n    \"minutes\": \"<integer>\",\n    \"month\": \"<integer>\",\n    \"nanos\": \"<integer>\",\n    \"seconds\": \"<integer>\",\n    \"time\": \"<long>\",\n    \"timezoneOffset\": \"<integer>\",\n    \"year\": \"<integer>\"\n  },\n  \"email\": \"<string>\",\n  \"id\": \"<string>\",\n  \"isactive\": \"<boolean>\",\n  \"last_login\": {\n    \"date\": \"<integer>\",\n    \"day\": \"<integer>\",\n    \"hours\": \"<integer>\",\n    \"minutes\": \"<integer>\",\n    \"month\": \"<integer>\",\n    \"nanos\": \"<integer>\",\n    \"seconds\": \"<integer>\",\n    \"time\": \"<long>\",\n    \"timezoneOffset\": \"<integer>\",\n    \"year\": \"<integer>\"\n  },\n  \"modified\": {\n    \"date\": \"<integer>\",\n    \"day\": \"<integer>\",\n    \"hours\": \"<integer>\",\n    \"minutes\": \"<integer>\",\n    \"month\": \"<integer>\",\n    \"nanos\": \"<integer>\",\n    \"seconds\": \"<integer>\",\n    \"time\": \"<long>\",\n    \"timezoneOffset\": \"<integer>\",\n    \"year\": \"<integer>\"\n  },\n  \"name\": \"<string>\",\n  \"password\": \"<string>\",\n  \"phones\": [\n    {\n      \"citycode\": \"<string>\",\n      \"contrycode\": \"<string>\",\n      \"id_phone\": \"<integer>\",\n      \"number\": \"<string>\",\n      \"user\": {\n        \"value\": \"<Circular reference to #/components/schemas/UserDTO detected>\"\n      }\n    },\n    {\n      \"citycode\": \"<string>\",\n      \"contrycode\": \"<string>\",\n      \"id_phone\": \"<integer>\",\n      \"number\": \"<string>\",\n      \"user\": {\n        \"value\": \"<Circular reference to #/components/schemas/UserDTO detected>\"\n      }\n    }\n  ],\n  \"token\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"created\": {\n    \"date\": \"<integer>\",\n    \"day\": \"<integer>\",\n    \"hours\": \"<integer>\",\n    \"minutes\": \"<integer>\",\n    \"month\": \"<integer>\",\n    \"nanos\": \"<integer>\",\n    \"seconds\": \"<integer>\",\n    \"time\": \"<long>\",\n    \"timezoneOffset\": \"<integer>\",\n    \"year\": \"<integer>\"\n  },\n  \"email\": \"<string>\",\n  \"id\": \"<string>\",\n  \"isactive\": \"<boolean>\",\n  \"last_login\": {\n    \"date\": \"<integer>\",\n    \"day\": \"<integer>\",\n    \"hours\": \"<integer>\",\n    \"minutes\": \"<integer>\",\n    \"month\": \"<integer>\",\n    \"nanos\": \"<integer>\",\n    \"seconds\": \"<integer>\",\n    \"time\": \"<long>\",\n    \"timezoneOffset\": \"<integer>\",\n    \"year\": \"<integer>\"\n  },\n  \"modified\": {\n    \"date\": \"<integer>\",\n    \"day\": \"<integer>\",\n    \"hours\": \"<integer>\",\n    \"minutes\": \"<integer>\",\n    \"month\": \"<integer>\",\n    \"nanos\": \"<integer>\",\n    \"seconds\": \"<integer>\",\n    \"time\": \"<long>\",\n    \"timezoneOffset\": \"<integer>\",\n    \"year\": \"<integer>\"\n  },\n  \"name\": \"<string>\",\n  \"password\": \"<string>\",\n  \"phones\": [\n    {\n      \"citycode\": \"<string>\",\n      \"contrycode\": \"<string>\",\n      \"id_phone\": \"<integer>\",\n      \"number\": \"<string>\",\n      \"user\": {\n        \"value\": \"<Circular reference to #/components/schemas/UserDTO detected>\"\n      }\n    },\n    {\n      \"citycode\": \"<string>\",\n      \"contrycode\": \"<string>\",\n      \"id_phone\": \"<integer>\",\n      \"number\": \"<string>\",\n      \"user\": {\n        \"value\": \"<Circular reference to #/components/schemas/UserDTO detected>\"\n      }\n    }\n  ],\n  \"token\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "login",
+					"item": [
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"admin\",\n  \"password\": \"Bgfdgfdg23dsfds\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\",\n  \"password\": \"<string>\",\n  \"token\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/login",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"adicional\": {},\n  \"estado\": \"<integer>\",\n  \"mensaje\": \"<string>\",\n  \"tipoRespuesta\": \"<string>\"\n}"
+								},
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\",\n  \"password\": \"<string>\",\n  \"token\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/login",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"login"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\",\n  \"password\": \"<string>\",\n  \"token\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/login",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"login"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\",\n  \"password\": \"<string>\",\n  \"token\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/login",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"login"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\",\n  \"password\": \"<string>\",\n  \"token\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/login",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"login"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080"
+		}
+	]
+}
