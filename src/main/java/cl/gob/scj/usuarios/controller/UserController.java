@@ -80,9 +80,10 @@ public class UserController {
         }
     }
 
-    @PutMapping("/user")
-    public ResponseEntity<RespuestaJSON> actualizaUser(@RequestBody UserDTO user) {
+    @PutMapping("/user/{id}")
+    public ResponseEntity<RespuestaJSON> actualizaUser(@PathVariable String id, @RequestBody UserDTO user) {
         try {            
+            user.setId(id);
             RespuestaJSON r = userService.actualizaUser(user);
             if (r.getMensaje().equals(mensajes.getMessage("user.no-encontrado", null, LocaleContextHolder.getLocale()))) {
                 return new ResponseEntity<>(r, HttpStatus.NOT_FOUND);
