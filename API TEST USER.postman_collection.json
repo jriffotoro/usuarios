@@ -27,14 +27,14 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/api/user/4e87093f-67d8-42b8-b54c-f5b0e20828f4",
+											"raw": "{{baseUrl}}/api/user/9a08c072-9a7c-46fb-805f-bb7c2e74080c",
 											"host": [
 												"{{baseUrl}}"
 											],
 											"path": [
 												"api",
 												"user",
-												"4e87093f-67d8-42b8-b54c-f5b0e20828f4"
+												"9a08c072-9a7c-46fb-805f-bb7c2e74080c"
 											]
 										}
 									},
@@ -557,14 +557,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseUrl}}/api/user/4e87093f-67d8-42b8-b54c-f5b0e20828f4",
+									"raw": "{{baseUrl}}/api/user/9a08c072-9a7c-46fb-805f-bb7c2e74080c",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
 										"api",
 										"user",
-										"4e87093f-67d8-42b8-b54c-f5b0e20828f4"
+										"9a08c072-9a7c-46fb-805f-bb7c2e74080c"
 									]
 								}
 							},
@@ -778,6 +778,9 @@
 						{
 							"name": "login",
 							"request": {
+								"auth": {
+									"type": "noauth"
+								},
 								"method": "POST",
 								"header": [
 									{
@@ -1022,7 +1025,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiYWRtaW4iLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjg1ODk1MDU0LCJleHAiOjE2ODU4OTU2NTR9.ObaFjEDcecQQ2WAD2QzvW9RbfnfwTzwPSyzr0UyhBzp_idlWAAaXgQ1battco7X1BnvAkSe02eJFB-597JIg0Q",
+				"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiYWRtaW4iLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjg2MDAzMzk0LCJleHAiOjE2ODYwMDM5OTR9.HFIcld0n8-W_lu6ByMAxDqAAVEJ-yJnzxBFC1CYLowOLhAfieih8R_A7h1ZoEMPOtKhfK_oBBwSbWf1ROy0Uiw",
 				"type": "string"
 			}
 		]

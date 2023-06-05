@@ -120,6 +120,7 @@ public class UserServiceImpl implements UserService {
     public RespuestaJSON actualizaUser(UserDTORequest user) {
         Optional<User> t = userRepository.findById(user.getId());
         if (t.isPresent()) {
+            List<Phone> ph2 = new ArrayList<Phone>();
             User u = t.get();
             u.setEmail(user.getEmail()!=null ? user.getEmail() : u.getEmail());
             u.setIsactive(user.getIsactive()!=null ? user.getIsactive() : u.getIsactive());
@@ -135,9 +136,11 @@ public class UserServiceImpl implements UserService {
                     Phone f = new Phone();
                     BeanUtils.copyProperties(phone, f);
                     f.setUser(u); 
+                    ph2.add(f);
                     phoneRepository.save(f); 
                 });
             }
+            u.setPhones(ph2);
             return new RespuestaJSON(RespuestaJSON.EstadoType.OK.getRespuestaJSONS(), mensajes.getMessage("user.actualizado", null, LocaleContextHolder.getLocale()), user);
         }   
         return new RespuestaJSON(RespuestaJSON.EstadoType.ERROR.getRespuestaJSONS(), mensajes.getMessage("user.no-encontrado", null, LocaleContextHolder.getLocale()));       
